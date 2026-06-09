@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap');
 
-
+/* GLOBAL */
 
 :root {
   --marvel-red: #e62429;
@@ -24,9 +24,7 @@ body {
   min-height: 100vh;
 }
 
-/* ==========================
-   HEADER
-========================== */
+/* HEADER */
 
 header {
   background: #111;
@@ -50,9 +48,7 @@ header p {
   font-size: 0.9rem;
 }
 
-/* ==========================
-   GRID
-========================== */
+/* GRID */
 
 #characters-grid {
   display: grid;
@@ -64,9 +60,7 @@ header p {
   margin: 0 auto;
 }
 
-/* ==========================
-   CARD
-========================== */
+/* CARD */
 
 .character-card {
   position: relative;
@@ -85,9 +79,7 @@ header p {
   box-shadow: 0 10px 30px rgba(230, 36, 41, 0.25);
 }
 
-/* ==========================
-   IMAGE
-========================== */
+/* IMAGE */
 
 .card-image {
   width: 100%;
@@ -101,9 +93,7 @@ header p {
   filter: brightness(0.25);
 }
 
-/* ==========================
-   LABEL
-========================== */
+/* LABEL */
 
 .card-label {
   position: absolute;
@@ -135,9 +125,7 @@ header p {
   margin-bottom: 0.5rem;
 }
 
-/* ==========================
-   TEAM BADGES
-========================== */
+/* TEAM BADGES */
 
 .team-badge {
   display: inline-block;
@@ -164,9 +152,7 @@ header p {
   color: white;
 }
 
-/* ==========================
-   OVERLAY
-========================== */
+/* OVERLAY */
 
 .card-overlay {
   position: absolute;
@@ -207,9 +193,7 @@ header p {
   color: white;
 }
 
-/* ==========================
-   BUTTON
-========================== */
+/* BUTTON */
 
 .card-overlay a {
   margin-top: 1rem;
@@ -231,9 +215,7 @@ header p {
   background: #ff4044;
 }
 
-/* ==========================
-   THREAT LEVELS
-========================== */
+/* THREAT LEVELS */
 
 .threat {
   display: inline-block;
@@ -263,9 +245,11 @@ header p {
   color: #ba68c8;
 }
 
-/* ==========================
-   DETAIL PAGE
-========================== */
+/* DETAIL PAGE */
+
+#detail-view {
+  padding-top: 2rem;
+}
 
 .detail-card {
   display: grid;
@@ -303,14 +287,17 @@ header p {
   color: var(--marvel-red);
 }
 
+.detail-info hr {
+  border-color: #333;
+  margin: 1rem 0;
+}
+
 .description {
   margin-top: 1rem;
   line-height: 1.7;
 }
 
-/* ==========================
-   BACK BUTTON
-========================== */
+/* BACK BUTTON */
 
 #back-btn {
   display: inline-block;
@@ -320,9 +307,15 @@ header p {
   font-weight: bold;
 }
 
-/* ==========================
-   RESPONSIVE
-========================== */
+/* 404 PAGE */
+
+#not-found-view h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  color: var(--marvel-red);
+}
+
+/* RESPONSIVE */
 
 @media (max-width: 950px) {
   #characters-grid {
