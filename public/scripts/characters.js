@@ -45,10 +45,10 @@ const renderCharacters = async () => {
 
 // ── DETAIL: render one character
 const renderCharacter = async () => {
-  const id = parseInt(path.split('/').pop());
+  const id = path.split('/').filter(Boolean).pop();
   const response = await fetch('/characters');
   const data = await response.json();
-  const character = data.find(c => c.id === id);
+  const character = data.find((entry) => String(entry.id).toLowerCase() === String(id).toLowerCase());
 
   const detail = document.getElementById('character-detail');
 

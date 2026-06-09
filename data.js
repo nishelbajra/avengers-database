@@ -56,4 +56,12 @@ const characters = [
   }
 ];
 
+function findCharacterById(id) {
+  const normalizedId = String(id || '').trim().toLowerCase();
+
+  return characters.find((character) => String(character.id).toLowerCase() === normalizedId);
+}
+
 module.exports = characters;
+module.exports.characters = characters;
+module.exports.findCharacterById = findCharacterById;
