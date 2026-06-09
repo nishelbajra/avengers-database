@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <title>S.H.I.E.L.D. Intelligence Database</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header-container">
+        <h1>S.H.I.E.L.D. Intelligence Database</h1>
+        <p>Classified personnel files — authorized access only</p>
+      </div>
+    </header>
+
+    <!-- HOME VIEW -->
+    <main class="container" id="home-view">
+      <div id="characters-grid"></div>
+    </main>
+
+    <!-- DETAIL VIEW -->
+    <main class="container" id="detail-view" style="display:none;">
+      <a href="/" id="back-btn">← Back to Database</a>
+      <div id="character-detail"></div>
+    </main>
+
+    <!-- 404 VIEW -->
+    <main class="container" id="not-found-view" style="display:none; text-align:center; margin-top:5rem;">
+      <h1>🚫 404 — Access Denied</h1>
+      <p>This file does not exist in the S.H.I.E.L.D. database.</p>
+      <a href="/" role="button">Return to Database</a>
+    </main>
+
+    <script src="/scripts/characters.js"></script>
+  </body>
+</html>
