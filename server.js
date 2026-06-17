@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-const { characters, findCharacterById } = require('./data');
+const { findCharacterById } = require('./data');
+const pool = require('./config/db');
 
 // Serve static files from public folder
 app.use(express.static('public'));
@@ -11,8 +12,9 @@ app.get('/', (req, res) => {
 });
 
 // API ROUTE - returns all characters as JSON
-app.get('/characters', (req, res) => {
-  res.json(characters);
+app.get('/characters', async (req, res) => {
+  const result = await pool.query('SELECT * FROM characters');
+  res.json(result.rows);
 });
 
 // DETAIL API ROUTE - returns one character as JSON
